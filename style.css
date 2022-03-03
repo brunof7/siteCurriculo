@@ -10,6 +10,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 :root{
     --font-primary: "EB Garamond", serif;
     --font-secundary: "STIX Two Text", serif;
@@ -29,6 +33,87 @@ header{
     overflow: hidden;
     background-color: rgba(0,0,80, 0.8); 
 }
+
+
+/* sessão "Sobre Mim"*/
+
+.sessao-sobreMim {
+    width: 100%;
+    height:100vh;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.img-sobreMim{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+    position: absolute;
+   
+  /*  background-color: grey;*/
+}
+
+ .img-sobreMim img{
+    max-width: 100rem;
+    max-height: 25rem;
+    object-fit: cover ;
+    opacity: 1;
+    padding-top: 7rem;
+    padding-left: 70rem;
+    vertical-align: top;
+   /* background-color: grey;*/
+}
+
+.header-sobreMim h1{
+    
+    color:#302b63;
+    margin-bottom: 5rem;
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+     
+}
+
+.sobreMim-texto p {
+
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    text-indent: 2em;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    width: 43em;
+    overflow: hidden;
+    line-height: 2rem;
+    white-space:pre-line;
+    z-index: 50;    
+    /*background-color: grey;*/
+    text-align: justify;
+    justify-content: left;
+    /*word-wrap: break-word;*/
+    color: #302b63;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    /*align-items: initial;*/
+    
+}
+
+ 
+
+@keyframes movesobreMim{
+    0%{
+        transform: translateX(10rem) rotateX(-50deg);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 @keyframes zoom{
     0%{
@@ -189,6 +274,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1.2s;
+    z-index: 50;
 }
 
 .showMenu .sideBar{
