@@ -10,8 +10,15 @@
     text-decoration: none;
 }
 
+.container{
+    width: 100%;
+    height: 100vh;
+
+}
+
 html{
     scroll-behavior:smooth;
+    font-size: 100%;
 }
 
 :root{
@@ -21,7 +28,7 @@ html{
 }
 
 header{
-    width: 100;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -40,6 +47,7 @@ header{
 .sessao-sobreMim {
     width: 100%;
     height:100vh;
+    overflow: hidden;
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -65,8 +73,7 @@ header{
    /* background-color: grey;*/
 }
 
-.header-sobreMim h1{
-    
+.header-sobreMim h1{ 
     color:#302b63;
     margin-bottom: 5rem;
     font-family: var(--font-primary);
@@ -75,7 +82,6 @@ header{
     justify-content: center;
     align-items: center;
     display: flex;
-     
 }
 
 .sobreMim-texto p {
@@ -84,8 +90,9 @@ header{
     font-size: 1.5rem;
     text-indent: 2em;
     margin-top: 1rem;
-    margin-left: 5rem;
+    margin-left: 4rem;
     width: 43em;
+    text-shadow: 0.2em 0.2em 0.3em #4d449e;
     overflow: hidden;
     line-height: 2rem;
     white-space:pre-line;
@@ -102,8 +109,6 @@ header{
     
 }
 
- 
-
 @keyframes movesobreMim{
     0%{
         transform: translateX(10rem) rotateX(-50deg);
@@ -113,7 +118,6 @@ header{
         opacity: 1;
     }
 }
-
 
 @keyframes zoom{
     0%{
@@ -198,7 +202,7 @@ header{
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 350;
     right: 2rem;
     top: 1.5rem;
     display: flex;
@@ -245,6 +249,7 @@ header{
     background-color: white ;
     box-shadow: 0.1rem 0.1rem 0.5px #302b63;
     cursor: pointer;
+    
 }
 
 .showMenu #line1{
@@ -274,7 +279,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1.2s;
-    z-index: 50;
+    z-index: 300;
 }
 
 .showMenu .sideBar{
@@ -308,7 +313,6 @@ header{
     border-radius: 10px 20px ;
     transition: background-color 1.5s;
 
-     
 }
 
 .socialMedia{
@@ -337,3 +341,253 @@ header{
     background-color: #302b63;
     transition: background-color 1.0s;
 }
+
+/*---Linha do tempo da formação acadêmica*/
+
+.sessao-timeline{
+    font-family: var(--font-primary);
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #24243e;
+    color:#FFFFFF;
+    width: 100%;
+    height:100vh;
+}
+
+.sessao-timeline input{
+    display:none;
+    position: absolute;
+}
+
+.sessao-timeline .header-timeline h1{
+    color:#FFFFFF;
+    margin-bottom: 5rem;
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sessao-timeline .head-timeline{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 25vh;
+    margin-top: 3rem;
+    animation: trans .7s linear forwards;
+}
+
+.sessao-timeline .nav-timeline{
+    padding-top: 15px;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.sessao-timeline .nav-timeline li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer; 
+    font-size: 200;
+    transition: all .3s ease;
+    vertical-align: middle;
+    height: 60px;
+    position: relative;
+}
+
+.sessao-timeline .nav-timeline li::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    transition: all .3s ease;
+}
+
+.sessao-timeline .nav-timeline li:hover::before{
+    border: 2px solid #777;
+    background-color: #FFFFFF;
+}
+
+.sessao-timeline .nav-timeline li .inner{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.nav-timeline li.active, .nav-timeline li:hover{
+    color: #444;
+}
+
+.nav-timeline li::after{
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+    margin: auto;
+    border: 7px solid #24243e;
+    margin-top: 40px;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.2);
+}
+
+.nav-timeline li:hover::after, .nav-timeline li.active::after{
+    background:#777
+}
+
+.line-timeline{
+    width: 76%;
+    margin: auto;
+    background: #eee;
+    height: 7px;
+    position: absolute;
+    left: 11.8%;
+    top: 52px;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.line-timeline span{
+    content: '';
+    width: 2%;
+    height: 100%;
+    background-image: -moz-linear-gradient(to right, #0f0c29 0%, rgba(51, 46, 105, 0.600) 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: all .8s ease;
+}
+
+.content-timeline{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    animation: anim .7s linear forwards;
+    flex-direction: column;
+}
+
+.content-timeline section{
+    width: 70%;
+    margin: auto;
+    background-image: -moz-linear-gradient(to right, #0f0c29 0%, rgba(51, 46, 105, 0.600) 100%);    
+    border: #FFFFFF;
+    border-radius: 4px;
+    border: 2px solid #FFFFFF;
+    padding: 30px;
+}
+
+.content-timeline section span{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.content-timeline h1{
+    font-family: var(--font-primary);
+    font-weight: 900;
+    margin-top:  10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-timeline p{
+    font-family: var(--font-secundary);
+    justify-content: center;
+    text-align: justify;
+    padding: 30px 40px;
+    font-size: 14px;
+}
+
+.profile:checked ~ .head-timeline .nav-timeline li.st1::before,
+.settings:checked ~ .head-timeline .nav-timeline li.st1::before,
+.settings:checked ~ .head-timeline .nav-timeline li.st2::before,
+.post:checked ~ .head-timeline .nav-timeline li.st1::before,
+.post:checked ~ .head-timeline .nav-timeline li.st2::before,
+.post:checked ~ .head-timeline .nav-timeline li.st3::before,
+.books:checked ~ .head-timeline .nav-timeline li.st1::before,
+.books:checked ~ .head-timeline .nav-timeline li.st2::before,
+.books:checked ~ .head-timeline .nav-timeline li.st3::before,
+.books:checked ~ .head-timeline .nav-timeline li.st4::before{
+    border: 2px solid #24243e;
+    background: #FFFFFF;
+    transition: all .3s ease;    
+}
+
+.settings:checked ~ .head-timeline .line-timeline span{
+    width: 35%;
+}
+
+.post:checked ~ .head-timeline .line-timeline span{
+    width: 68%;
+}
+
+.books:checked ~ .head-timeline .line-timeline span{
+    width: 100%;
+}
+
+.profile-section, 
+.account-section, 
+.post-section, 
+.advanced-section{
+    transform: scale(0);
+    transform-origin: center bottom;
+    transition: all .7s ease;
+    position: absolute;
+    top: 0;
+} 
+
+.profile:checked~.content-timeline .profile-section,
+.settings:checked~.content-timeline .account-section, 
+.post:checked~.content-timeline .post-section, 
+.books:checked~.content-timeline .advanced-section{
+    display: block;
+    transform: scale(1);
+    transform-origin: bottom;    
+}
+
+@keyframes anim{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    50%{
+        opacity: .5;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes trans{
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    50%{
+        opacity: .5;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
