@@ -359,7 +359,7 @@ header{
     position: absolute;
 }
 
-.sessao-timeline .header-timeline h1{
+.header-timeline h1{
     color:#FFFFFF;
     margin-bottom: 5rem;
     font-family: var(--font-primary);
@@ -370,16 +370,17 @@ header{
     display: flex;
 }
 
-.sessao-timeline .head-timeline{
+.head-timeline{
     position: relative;
     width: 90%;
     margin: auto;
     height: 25vh;
     margin-top: 3rem;
+    color: #FFFFFF;
     animation: trans .7s linear forwards;
 }
 
-.sessao-timeline .nav-timeline{
+.nav-timeline{
     padding-top: 15px;
     z-index: 100;
     position: absolute;
@@ -387,22 +388,21 @@ header{
     margin-top: -40px;
 }
 
-.sessao-timeline .nav-timeline li{
+.nav-timeline li{
     list-style: none;
     float: left;
-    width: 25%;
+    width: 20%;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 16px;
     cursor: pointer; 
-    font-size: 200;
     transition: all .3s ease;
     vertical-align: middle;
-    height: 60px;
+    height: 55px;
     position: relative;
 }
 
-.sessao-timeline .nav-timeline li::before{
+.nav-timeline li::before{
     content: '';
     width: 25px;
     height: 25px;
@@ -413,22 +413,21 @@ header{
     transition: all .3s ease;
 }
 
-.sessao-timeline .nav-timeline li:hover::before{
+.nav-timeline li:hover::before{
     border: 2px solid #777;
     background-color: #FFFFFF;
 }
 
-.sessao-timeline .nav-timeline li .inner{
+.nav-timeline li .inner{
     position: absolute;
     width: 100%;
     bottom: 0;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: var(--font-action);
 }
 
-
 .nav-timeline li.active, .nav-timeline li:hover{
-    color: #444;
+    color: #FFFFFF;
 }
 
 .nav-timeline li::after{
@@ -448,13 +447,14 @@ header{
     background:#777
 }
 
+
 .line-timeline{
-    width: 76%;
+    width: 81%;
     margin: auto;
     background: #eee;
     height: 7px;
     position: absolute;
-    left: 11.8%;
+    left: 9.5%;
     top: 52px;
     z-index: 1;
     border-radius: 50px;
@@ -462,7 +462,7 @@ header{
 
 .line-timeline span{
     content: '';
-    width: 2%;
+    width: 0%;
     height: 100%;
     background-image: -moz-linear-gradient(to right, #0f0c29 0%, rgba(51, 46, 105, 0.600) 100%);
     position: absolute;
@@ -499,52 +499,81 @@ header{
 
 .content-timeline h1{
     font-family: var(--font-primary);
-    font-weight: 900;
+    font-size: 24px;
+    font-weight: 1000;
     margin-top:  10px;
+    margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.content-timeline p{
+.content-timeline h2{
     font-family: var(--font-secundary);
-    justify-content: center;
-    text-align: justify;
-    padding: 30px 40px;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.profile:checked ~ .head-timeline .nav-timeline li.st1::before,
-.settings:checked ~ .head-timeline .nav-timeline li.st1::before,
-.settings:checked ~ .head-timeline .nav-timeline li.st2::before,
-.post:checked ~ .head-timeline .nav-timeline li.st1::before,
-.post:checked ~ .head-timeline .nav-timeline li.st2::before,
-.post:checked ~ .head-timeline .nav-timeline li.st3::before,
-.books:checked ~ .head-timeline .nav-timeline li.st1::before,
-.books:checked ~ .head-timeline .nav-timeline li.st2::before,
-.books:checked ~ .head-timeline .nav-timeline li.st3::before,
-.books:checked ~ .head-timeline .nav-timeline li.st4::before{
+.content-timeline h3{
+    font-family: var(--font-secundary);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+.content-timeline p{
+    font-family: var(--font-secundary);
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 40px;
+    letter-spacing: 1.5;
+    
+}
+
+.admin:checked ~ .head-timeline .nav-timeline li.st1::before,
+.projetos:checked ~ .head-timeline .nav-timeline li.st1::before,
+.projetos:checked ~ .head-timeline .nav-timeline li.st2::before,
+.auditCont:checked ~ .head-timeline .nav-timeline li.st1::before,
+.auditCont:checked ~ .head-timeline .nav-timeline li.st2::before,
+.auditCont:checked ~ .head-timeline .nav-timeline li.st3::before,
+.compliance:checked ~ .head-timeline .nav-timeline li.st1::before,
+.compliance:checked ~ .head-timeline .nav-timeline li.st2::before,
+.compliance:checked ~ .head-timeline .nav-timeline li.st3::before,
+.compliance:checked ~ .head-timeline .nav-timeline li.st4::before,
+.sistemas:checked ~ .head-timeline .nav-timeline li.st1::before,
+.sistemas:checked ~ .head-timeline .nav-timeline li.st2::before,
+.sistemas:checked ~ .head-timeline .nav-timeline li.st3::before,
+.sistemas:checked ~ .head-timeline .nav-timeline li.st4::before,
+.sistemas:checked ~ .head-timeline .nav-timeline li.st5::before{
     border: 2px solid #24243e;
     background: #FFFFFF;
     transition: all .3s ease;    
 }
 
-.settings:checked ~ .head-timeline .line-timeline span{
-    width: 35%;
+.projetos:checked ~ .head-timeline .line-timeline span{
+    width: 25%;
 }
 
-.post:checked ~ .head-timeline .line-timeline span{
-    width: 68%;
+.auditCont:checked ~ .head-timeline .line-timeline span{
+    width: 50%;
 }
 
-.books:checked ~ .head-timeline .line-timeline span{
+.compliance:checked ~ .head-timeline .line-timeline span{
+    width: 75%;
+}
+
+.sistemas:checked ~ .head-timeline .line-timeline span{
     width: 100%;
 }
 
-.profile-section, 
-.account-section, 
-.post-section, 
-.advanced-section{
+.admin-section, 
+.projetos-section, 
+.auditCont-section, 
+.compliance-section,
+.sistemas-section
+{
     transform: scale(0);
     transform-origin: center bottom;
     transition: all .7s ease;
@@ -552,10 +581,11 @@ header{
     top: 0;
 } 
 
-.profile:checked~.content-timeline .profile-section,
-.settings:checked~.content-timeline .account-section, 
-.post:checked~.content-timeline .post-section, 
-.books:checked~.content-timeline .advanced-section{
+.admin:checked~.content-timeline .admin-section,
+.projetos:checked~.content-timeline .projetos-section, 
+.auditCont:checked~.content-timeline .auditCont-section, 
+.compliance:checked~.content-timeline .compliance-section,
+.sistemas:checked~.content-timeline .sistemas-section{
     display: block;
     transform: scale(1);
     transform-origin: bottom;    
@@ -591,3 +621,4 @@ header{
     }
 }
 
+/*-----Conhecimentos-----*/
